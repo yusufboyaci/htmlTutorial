@@ -11,11 +11,49 @@
     list-style-type: none;
 margin: 10px;
 padding: 0;
+overflow: hidden;
+background-color:#333 ;
+opacity: 0.4;
+
 
 }
 .navbaritems{
-
+   
     display: inline;
+}
+.navbaritems a{
+    color: white;
+    padding: 15px 15px;
+    position: sticky;
+    float: right;
+
+}
+.Start{
+    margin-top: 20px;
+    margin-left: 30px;
+    position: absolute;
+    z-index: 2;
+  
+    
+}
+.header{
+text-align: center;
+
+}
+.btn{
+
+    padding: 2pt, 1pt,1pt,2pt;
+    width: 100px;
+    height:50px; 
+    background-color: black;
+    color: white;  
+    
+   
+
+}
+.btn:hover{
+    background-color: white;
+    color: black;
 }
 
     </style>
@@ -23,17 +61,40 @@ padding: 0;
 <body>
 <div>
 
+  
 
-ksjdhsjsddsjdsjbjbcd
+<div class="navbar">
+    <div class="Start">
+        <a style="color: white" href="">Start Bootstrap</a>
 
-<div>
+    </div>
 
-    <ul class="navbar">
-        <li class="navbaritems"><a href="">Start Bootstrap</a></li>
+    <ul >
+        
         <li class="navbaritems"><a href="">Sign Up</a></li>
         <li class="navbaritems"><a href="">Log In</a></li>
 
     </ul>
+</div>
+
+
+<div>
+    <header class="header">
+<div>
+
+<div>
+
+    <h1>One Page Wonder</h1>
+    <h2>Will Rock Your Socks Off</h2>
+    <button class="btn">Learn More</button>
+</div>
+
+</div>
+
+
+    </header>
+
+
 </div>
 
 </div>
