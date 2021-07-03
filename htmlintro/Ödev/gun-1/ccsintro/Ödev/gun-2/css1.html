@@ -8,24 +8,34 @@
 
     <style>
 .navbar{
+    position: sticky;
     list-style-type: none;
-margin: 10px;
-padding: 0;
-overflow: hidden;
-background-color:#333 ;
-opacity: 0.4;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color:#333 ;
+    opacity: 0.4;
 
 
 }
 .navbaritems{
    
     display: inline;
+   
 }
 .navbaritems a{
-    color: white;
+    color: #b4c2c2;
     padding: 15px 15px;
-    position: sticky;
+  
+    
+    text-decoration: none;
     float: right;
+
+}
+
+.navbaritems a:hover{
+    color:white;
+
 
 }
 .Start{
@@ -37,35 +47,75 @@ opacity: 0.4;
     
 }
 .header{
-text-align: center;
+    display: grid;
+    align-content: center;
+    height: 700px;
+    text-align: center;
+    font-size: 30pt;
 
 }
+
 .btn{
 
     padding: 2pt, 1pt,1pt,2pt;
-    width: 100px;
-    height:50px; 
-    background-color: black;
+    width: 220px;
+    height:70px; 
+    border-color: rgb(226, 106, 126);
+    background-color: rgb(226, 106, 126);
     color: white;  
+    border-radius: 35px;
     
    
 
 }
 .btn:hover{
-    background-color: white;
+    border-color: rgb(224, 43, 43);
+    background-color: rgb(224, 43, 43);
     color: black;
 }
+.btnStart{
+
+    color: #b4c2c2;
+    text-decoration: none;
+   
+
+}
+.btnStart:hover{
+    color: white;
+}
+
+.resim{
+    width: 400px;
+    border-radius: 50%;
+}
+.container{
+    display: grid;
+}
+
+.resimDiv{
+
+    display: grid;
+    justify-content: end;
+}
+
+
+
+
+
 
     </style>
 </head>
 <body>
-<div>
+
+
+
+    <div class=".container"> 
 
   
 
 <div class="navbar">
     <div class="Start">
-        <a style="color: white" href="">Start Bootstrap</a>
+        <a class="btnStart"  href="">Start Bootstrap</a>
 
     </div>
 
@@ -80,16 +130,18 @@ text-align: center;
 
 <div>
     <header class="header">
-<div>
 
-<div>
 
-    <h1>One Page Wonder</h1>
-    <h2>Will Rock Your Socks Off</h2>
-    <button class="btn">Learn More</button>
-</div>
+    <div>
 
-</div>
+        <h1>One Page Wonder</h1>
+        <h2>Will Rock Your Socks Off</h2>
+        <button class="btn">Learn More</button>
+        
+    
+    </div>
+
+
 
 
     </header>
@@ -100,7 +152,12 @@ text-align: center;
           <div>
 
             <div>
-                <div><img src="" alt=""></div>
+                <div class="resimDiv">
+
+
+                    <img class="resim" src="01.jpg" alt="">
+                
+                </div>
 
             </div>
           </div>
