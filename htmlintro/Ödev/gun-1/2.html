@@ -16,20 +16,34 @@
 }
 
 .header{
-    z-index: -1;
+   display: grid;
+   align-content: center;
+  
   height: 500px;
+ 
+  
+  
+
    
-    background:url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
+   
+}
+
+.arkaFonResim{
+    /* background:url("https://static.pexels.com/photos/248515/pexels-photo-248515.png"); */
+   background-size: cover;
+    opacity: 0.8;
+    position: absolute;
+    z-index: -1;
 }
 .btn{
-    padding: 2pt, 1pt,1pt,2pt;
+    
     width: 100px;
     height:50px; 
     background-color: black;
     color: white;  
-    text-align: center;
+   
     position: relative;
-    left: 620px;
+    /* left: 620px; */
 
 }
 
@@ -38,16 +52,11 @@
     color: black;
 }
     .headParagraph{
+        display: grid;
         color: white;
-        text-align: center;
-        text-justify: auto;
        
-
-}
-
-.grid-container {
-    text-align: center;
-    
+        width: 500px;
+       
 
 }
 
@@ -62,16 +71,21 @@
 <body>
     <div>
         <div class="header">
-            <div>
-               
-                <h1 class="headParagraph">Welcome to Acme Web Solutions</h1>
-                <div class="grid-container">
-                <p class="headParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia hic doloribus minima dolores voluptates vero similique natus neque exercitationem autem, est, temporibus nesciunt ipsa facere voluptate aperiam ex velit corporis?</p>
+            <div class="arkaFonResim">
+
+                <img src="https://static.pexels.com/photos/248515/pexels-photo-248515.png" alt="" width="1800" height="500">
             </div>
-            </div>
-            <div>
-                <button class="btn">Read More</button>
-            </div>
+            
+      
+            <div style="margin-left: 450px;" class="headParagraph">
+                <h1>Welcome to Acme Web Solutions</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia hic doloribus minima dolores voluptates vero similique natus neque exercitationem autem, est, temporibus nesciunt ipsa facere voluptate aperiam ex velit corporis?</p>
+        </div>
+        <div style="margin-left: 650px;">
+            <button class="btn">Read More</button>
+
+        </div>            
+            
         </div>
 
         <div>
