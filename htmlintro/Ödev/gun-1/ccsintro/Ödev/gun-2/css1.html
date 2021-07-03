@@ -14,7 +14,8 @@
     padding: 0;
     overflow: hidden;
     background-color:#333 ;
-    opacity: 0.4;
+    
+    margin: 0;
 
 
 }
@@ -52,6 +53,9 @@
     height: 700px;
     text-align: center;
     font-size: 30pt;
+    
+    background-color: deeppink;
+    color: white;
 
 }
 
@@ -63,6 +67,7 @@
     border-color: rgb(226, 106, 126);
     background-color: rgb(226, 106, 126);
     color: white;  
+    font-size: 18px;
     border-radius: 35px;
     
    
@@ -73,14 +78,14 @@
     background-color: rgb(224, 43, 43);
     color: black;
 }
-.btnStart{
+.startBootstrap{
 
     color: #b4c2c2;
     text-decoration: none;
    
 
 }
-.btnStart:hover{
+.startBootstrap:hover{
     color: white;
 }
 
@@ -89,16 +94,41 @@
     border-radius: 50%;
 }
 .container{
+    
     display: grid;
+    
+    
 }
 
 .resimDiv{
 
     display: grid;
-    justify-content: end;
+    column-gap:50px ;
+    row-gap: 50px;
+   
+   
 }
+.ortaBolum{
 
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 40px;
+    display: grid;
+    column-gap:60px ;
+    row-gap: 50px;
+    grid-template-columns: 50% 50%;
+    justify-content: space-around;
+}
+.ortaBaslik{
+    font-size: 30pt;
 
+}
+.yaziDiv{
+
+    display: grid;
+    justify-content: space-around;
+
+}
 
 
 
@@ -115,7 +145,7 @@
 
 <div class="navbar">
     <div class="Start">
-        <a class="btnStart"  href="">Start Bootstrap</a>
+        <a class="startBootstrap"  href="">Start Bootstrap</a>
 
     </div>
 
@@ -141,29 +171,69 @@
     
     </div>
 
-
-
-
     </header>
 
     <div>
 
-      <div>
-          <div>
+     
 
-            <div>
-                <div class="resimDiv">
+            <div class="ortaBolum">
+                <div class="yaziDiv">
+                    <h1 class="ortaBaslik">For those about  <br> to rock...</h1>
+                    <p>
+
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet ipsum odio corrupti labore neque, quod reiciendis error quasi at eius natus quam porro ratione maxime eveniet itaque rerum quae. Iure?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quaerat ipsa impedit necessitatibus! Quia reiciendis quisquam rerum provident minus natus vero voluptates? Perferendis repudiandae obcaecati fuga itaque architecto enim unde.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci dignissimos quasi quae consectetur aliquid amet dicta aspernatur sunt sint aliquam quibusdam voluptates doloremque, recusandae, earum, veniam fugiat incidunt eius iure!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quam repudiandae suscipit pariatur rem et nesciunt eos cupiditate, reprehenderit officia voluptates itaque eligendi necessitatibus obcaecati, eius architecto sit veritatis facere?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perferendis ipsam veniam labore pariatur, iste excepturi suscipit alias veritatis architecto, saepe beatae? Maxime illo amet asperiores ratione deserunt ut reprehenderit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non neque quis quae, illo cupiditate cumque veritatis laudantium dicta ipsum quas eveniet facere eius enim aliquid! Aut quaerat facilis ea officiis!
+                    </p>
+
+
+                </div>
+                <div class="resimDiv" >
 
 
                     <img class="resim" src="01.jpg" alt="">
                 
                 </div>
+                
+
+            </div>
+
+            <div class="ortaBolum">
+                <div class="resimDiv" >
+
+
+                    <img class="resim" src="02.jpg" alt="">
+                
+                </div>
+                <div class="yaziDiv">
+
+                    <h1 class="ortaBaslik">
+                        We salute you!
+                    </h1>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur enim quia repellat, minus veritatis voluptate rerum, quisquam sed aut dolorum fugit esse rem. Aut quidem iste quae atque id ipsam.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus velit quas similique nesciunt iste illo porro dicta assumenda quo accusamus eos, tenetur deleniti unde temporibus qui, expedita saepe amet minus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id earum, sint, amet nobis reiciendis, aut suscipit repudiandae autem natus omnis repellat consequuntur? Placeat quod odit voluptatum at facilis tempore. Eos.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, possimus repudiandae dolores eum est molestiae labore minus sed deleniti vel provident obcaecati? Ea perspiciatis officia earum delectus dolore fuga mollitia.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam inventore voluptatibus laudantium modi culpa consequuntur possimus assumenda, fugiat nulla, iure tempora neque nemo corrupti ipsam aut, natus animi praesentium voluptate.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque provident optio eos earum fuga magni sapiente numquam autem corporis cumque quam ullam, modi vero repudiandae recusandae nesciunt suscipit adipisci pariatur.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, similique illum illo fugiat consectetur nesciunt aliquam vero ipsam, veniam, quasi cum nihil beatae perspiciatis odit nam esse a itaque! Pariatur?
+
+                    </p>
+
+
+                </div>
+            </div>
+
+            <div class="ortaBolum">
 
             </div>
           </div>
-      </div>  
-    </div>
-
+     
 
 </div>
 
