@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box{
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+    border-color: tomato;
+}
+body{
+    display: flex;
+}
+    </style>
+</head>
+<body>
+    <!-- <div id='main' style="width: 100px; height:100px; border-style: solid;"></div> -->
+    
+    
+    <div class="box">
+        Ali
+    </div>
+    <div class="box">
+        Veli
+    </div>
+    <div class="box">
+        Kitap
+    </div>
+    <button onclick="contentChange()">2. box değiştir</button>
+    <button onclick="changeColor()">Renk değiştir</button>
+    
+</body>
+</html>
+<script>
+    //Bu fonksiyon tetiklendiğinde tüm box ların rengi aquq olur
+    function changeColor(){
+        let boxes = document.getElementsByClassName('box');
+        console.log(boxes);
+        for(let i = 0; i<boxes.length;i++){
+            boxes[i].style.backgroundColor='aqua';
+        }
+    }
+    function contentChange(){
+    document.getElementsByClassName['box'][0].innerHtml = 'Bilge Adam';
+    }
+//document.getElementById('main').innerHTML="Çağatay bu konuda kızgın";
+
+//document.getElementsByClassName();
+
+</script>
