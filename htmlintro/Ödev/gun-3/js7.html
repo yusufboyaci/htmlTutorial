@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>15.Soru nun Çözümü</h1>
+
+    <button onclick="sayiUret()">Sayısal Loto Oyna</button><br><br>
+     <b style="font-size:larger;">Sonuç:</b> 
+
+    
+    <label for="" id="lbl1"></label>
+    <label for="" id="lbl2"></label>
+    <label for="" id="lbl3"></label>
+    <label for="" id="lbl4"></label>   
+    <label for="" id="lbl5"></label>
+    <label for="" id="lbl6"></label>
+    
+    <script>
+        function sayiUret()
+        {
+           
+                let rnd1 = Math.floor((Math.random() * 49) + 1);
+                let rnd2 = Math.floor((Math.random() * 49) + 1);
+                let rnd3 = Math.floor((Math.random() * 49) + 1);
+                let rnd4 = Math.floor((Math.random() * 49) + 1);
+                let rnd5 = Math.floor((Math.random() * 49) + 1);
+                let rnd6 = Math.floor((Math.random() * 49) + 1); 
+                
+                document.getElementById("lbl1").innerHTML = rnd1;
+                document.getElementById("lbl2").innerHTML = rnd2;
+                document.getElementById("lbl3").innerHTML = rnd3;
+                document.getElementById("lbl4").innerHTML = rnd4;
+                document.getElementById("lbl5").innerHTML = rnd5;
+                document.getElementById("lbl6").innerHTML = rnd6;
+        }
+
+    </script>
+    
+</body>
+</html>
