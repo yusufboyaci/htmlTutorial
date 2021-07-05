@@ -4,9 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hesap Makinesi</title>
+
+
+    <style>
+
+        .button{
+            width: 30px;
+            height: 30px;
+            border-style: solid;
+            border-color: grey;
+        }
+        body{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
 <body>
+
+  
+
+
+
+  <form action="">
+    <h1>10.Soru nun Çözümü</h1>
+  
+    
+    1.Sayı:
+    <input type="text" id="sayi1">
+    <br><br>
+    2.Sayi:
+    <input type="text" id="sayi2">
+    <br><br>
+
+    <button id="btnTopla">Toplama</button>
+    
+    <button id="btnCikar">Çıkarma</button>
+    
+    <button id="btnCarp">Çarpma</button>
+    
+    <button id="btnBol" >Bölme </button>
+
+  </form>  
+
+
+    
     
 </body>
 </html>
+
+
+    <script>
+
+        
+    let btnTopla = document.getElementById("btnTopla");
+    btnTopla.onclick = function () {
+        let sayi1 = Number(document.getElementById("sayi1").value);
+        let sayi2 = Number(document.getElementById("sayi2").value);
+        alert(sayi1+sayi2);
+    }
+
+    let btnCikar = document.getElementById("btnCikar");
+    btnCikar.onclick = function () {
+        let sayi1 = Number(document.getElementById("sayi1").value);
+        let sayi2 = Number(document.getElementById("sayi2").value);
+        alert(sayi1-sayi2);
+    }
+
+    let btnCarp = document.getElementById("btnCarp");
+    btnCarp.onclick = function () {
+        let sayi1 = Number(document.getElementById("sayi1").value);
+        let sayi2 = Number(document.getElementById("sayi2").value);
+        alert(sayi1*sayi2);
+    }
+
+    let btnBol = document.getElementById("btnBol");
+    btnBol.onclick = function () {
+        let sayi1 = Number(document.getElementById("sayi1").value);
+        let sayi2 = Number(document.getElementById("sayi2").value);
+        alert(sayi1/sayi2);
+    }
+
+
+</script>
