@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+             display: flex; 
+             justify-content: center; 
+
+             text-align: center;   
+             flex-wrap: wrap;
+            align-items: center; 
+            
+        }
+        table,th,td{
+            border:2px solid;
+            width: 250px;
+            height: 50px;
+            text-align: center;           
+        }
+        #btn{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>11.Soru nun Çözümü</h1>
+    <div style="width: 2000px;"></div>
+   
+    <table id="IsimListesi">
+
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Yaş</th>
+        </tr>
+        <tr>
+            <td>Hatice</td>
+            <td>Altan</td>
+            <td>37</td>
+        </tr>
+        <tr>
+            <td>Ayşe</td>
+            <td>Ergül</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Hakan</td>
+            <td>Çıtak</td>
+            <td>54</td>
+        </tr>
+        <tr>
+            <td>Aslı</td>
+            <td>Çilingiroğlu</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>Ceren</td>
+            <td>Demirkan</td>
+            <td>21</td>
+        </tr>
+
+
+    </table>
+    <div style="width: 2000px;"></div>
+    <br><br>
+    <br><br>
+    
+    <button onclick="satirSil()" id="btn">Buton</button>
+
+    <script>
+        function satirSil()
+        {
+            document.getElementById("IsimListesi").deleteRow(2);
+        }
+
+    </script>
+    
+</body>
+</html>
