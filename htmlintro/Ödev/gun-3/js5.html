@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    </head>
+    <body id="deger">
+        <h1>13.Soru nun Çözümü yanlış değer girince uyarı verme kısmını yapamadım</h1>
+        <input type="text" id="renk"> <br><br>
+        
+        
+        <button onclick="bodyRenkAyarla()">Arka Fon Renk Ayarla</button>
+
+        <script>                   
+            function bodyRenkAyarla()
+            {
+                document.getElementById("deger").style.backgroundColor = String(
+                    document.getElementById("renk").value
+                );
+            }
+        </script>
+
+    </body>
+    </html>
