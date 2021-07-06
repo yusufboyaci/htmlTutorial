@@ -8,62 +8,68 @@
 </head>
 <body>
     <h1>1. Soru cevap</h1>
-    <table>
+
+    <button onclick="getData()"><b>Ürünleri Getir</b></button>
+
+    <table id="products">
         <tr>
-            <th>Ürünler</th>
-            <th>Miktar</th>
-            <th>Fiyat</th>
+            <th>Name</th>
+            <th>Quantity Per Unit</th>
+            <th>Unit Price</th>
         </tr>
-        <tr id="products">
-
+        <tr>
+           <td></td>
         </tr>
-        <tr id="quantityPerUnit">
-
+        
+        <tr >
+           <td></td>
         </tr>
-        <tr id="unitPrice">
-
+       
+        <tr>
+            <td></td>
         </tr>
 
         
     </table>
     
-    <button id="" onclick="getData()"> <b>Ürünleri Getir</b></button>
+    
     <script>
         function getData()
         {
+            //mevcut url e bir get isteği attım. Daha sonra dönen response un body sinden datayı yakaladım ve console yazdırdım
             fetch("https://northwind.vercel.app/api/products")
             .then((res) => res.json())
             .then((data) => {
-                data.map((item) => {
-                    let newRow = document.createElement("tr");
-                    newRow.innerHTML=item.name;
-                    document.getElementById("products").appendChild(newRow);
+
+                data.map((item)=>{
+
+
+              
+
+                //Önce boş bir satır oluşturdum
+                let newtr = document.createElement("tr");
+
+
+                //sonra satırın içerisine gelecek olan 3 td yi oluşturup içerisine doldurdum              
+                    let tdName = document.createElement("td");
+                    let tdQuantityPerUnit = document.createElement("td");
+                    let tdUnitPrice = document.createElement("td");
+                   
+                    tdName.innerHTML=item.name;
+                    tdQuantityPerUnit.innerHTML = item.quantityPerUnit;
+                    tdUnitPrice.innerHTML = item.unitPrice;
+
+                    //Son olarak oluşturduğum hücreleri satıra, satırı ise tabloya ekledim
+                    newtr.appendChild(tdName);
+                    newtr.appendChild(tdQuantityPerUnit);
+                    newtr.appendChild(tdUnitPrice); 
+                    document.getElementById("products").appendChild(newtr);
+                   
                 });
             });
 
 
-            fetch("https://northwind.vercel.app/api/products")
-            .then((res) => res.json())
-            .then((data) => {
-                data.map((item) => {
-                    let newRow = document.createElement("tr");
-                    newRow.innerHTML=item.quantityPerUnit;
-                    document.getElementById("quantityPerUnit").appendChild(newRow);
-                });
-            });
-
-
-
-            fetch("https://northwind.vercel.app/api/products")
-            .then((res) => res.json())
-            .then((data) => {
-                data.map((item) => {
-                    let newRow = document.createElement("tr");
-                    newRow.innerHTML=item.unitPrice;
-                    document.getElementById("unitPrice").appendChild(newRow);
-                });
-            });
-
+         
 
 
         }
