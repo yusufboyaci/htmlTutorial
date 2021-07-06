@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let myPromise = new Promise(function(resolve,reject){
+            //Promise asekron çalışır
+
+            //işlem blokları
+            //işlem başarılı ise
+            try {
+            let user = {
+                name:'Çağatay'
+                ,surname:'Yıldız'
+            };
+            resolve(user);
+
+           
+                //resolve("işlem başarılı");
+                
+            } catch (error) {
+                reject(error)
+                
+            }
+            
+
+        });
+         //then başarılıysa o then işlemini yapacak değilse catch işlemini yapacak
+        myPromise.then((data) =>
+        {
+            console.log(data);
+        }
+        
+        )
+        .catch((error) =>{
+        
+            
+            console.error(data);
+        
+        });
+        console.log("Çağatay");
+       
+    </script>
+</body>
+</html>
