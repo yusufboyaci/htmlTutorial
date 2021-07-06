@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>3. Soru cevap</h1>
+        <div>
+        quantityPerUnit
+    <input type="text" id="quantityPerUnit">
+    </div>
+    
+    <div>
+    unitPrice
+    <input type="text" id="unitPrice">
+    </div>
+    
+    <div>
+    unitsInStock
+    <input type="text" id="unitsInStock">
+    </div>
+    
+    
+    <div>
+    unitsOnOrder
+    <input type="number" id="unitsOnOrder">
+    </div>
+
+    <div>
+    name
+    <input type="text" id="name">
+    </div>
+    <div>
+        <button onclick="add()">Add</button>
+    </div>
+    <script>
+        function add(){
+            let quantityPerUnit = document.getElementById("quantityPerUnit").value;
+            let unitPrice = document.getElementById("unitPrice").value;
+            let unitsInStock = document.getElementById("unitsInStock").value;
+            let unitsOnOrder = document.getElementById("unitsOnOrder").value;
+            let name = document.getElementById("name").value;
+
+            let newProducts = {
+               
+                    quantityPerUnit:quantityPerUnit,
+                    unitPrice:unitPrice,
+                    unitsInStock:unitsInStock,
+                    unitsOnOrder:unitsOnOrder,
+                    name:name,
+                
+            };
+
+            let requestOptions = {
+                headers:{
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "POST",
+                body:JSON.stringify(newProducts)
+            };
+            let url = "https://northwind.vercel.app/api/products";
+            fetch(url,requestOptions).then((res) => res.json()).then((data) => { console.log(data);});
+
+        };
+    </script>
+
+</body>
+</html>
