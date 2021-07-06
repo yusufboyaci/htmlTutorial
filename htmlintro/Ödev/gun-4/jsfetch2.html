@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>description</th>
+            <th>name</th>
+        </tr>
+        <tr id="description">
+
+        </tr>
+        <tr id="name">
+
+        </tr>
+    </table>
+    
+    <button onclick="getData()">Ürünleri Getir</button>
+    <script>
+        function getData()
+        {
+            fetch("https://northwind.vercel.app/api/categories")
+            .then((res) => res.json())
+            .then((data) => {
+                data.forEach(element => {
+                    let newRow = document.createElement("tr");
+                    newRow.innerHTML = element.description;
+                    document.getElementById("description").appendChild(newRow);
+                });
+
+            });
+
+            fetch("https://northwind.vercel.app/api/categories")
+            .then((res) => res.json())
+            .then((data) => {
+                data.forEach(element => {
+                    let newRow = document.createElement("tr");
+                    newRow.innerHTML = element.name;
+                    document.getElementById("name").appendChild(newRow);
+                });
+
+            });
+        }
+
+    </script>
+</body>
+</html>
