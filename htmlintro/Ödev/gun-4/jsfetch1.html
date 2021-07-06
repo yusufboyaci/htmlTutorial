@@ -8,7 +8,22 @@
 </head>
 <body>
     <h1>1. Soru cevap</h1>
-    <table id="products">
+    <table>
+        <tr>
+            <th>Ürünler</th>
+            <th>Miktar</th>
+            <th>Fiyat</th>
+        </tr>
+        <tr id="products">
+
+        </tr>
+        <tr id="quantityPerUnit">
+
+        </tr>
+        <tr id="unitPrice">
+
+        </tr>
+
         
     </table>
     
@@ -25,6 +40,32 @@
                     document.getElementById("products").appendChild(newRow);
                 });
             });
+
+
+            fetch("https://northwind.vercel.app/api/products")
+            .then((res) => res.json())
+            .then((data) => {
+                data.map((item) => {
+                    let newRow = document.createElement("tr");
+                    newRow.innerHTML=item.quantityPerUnit;
+                    document.getElementById("quantityPerUnit").appendChild(newRow);
+                });
+            });
+
+
+
+            fetch("https://northwind.vercel.app/api/products")
+            .then((res) => res.json())
+            .then((data) => {
+                data.map((item) => {
+                    let newRow = document.createElement("tr");
+                    newRow.innerHTML=item.unitPrice;
+                    document.getElementById("unitPrice").appendChild(newRow);
+                });
+            });
+
+
+
         }
 
     </script>
