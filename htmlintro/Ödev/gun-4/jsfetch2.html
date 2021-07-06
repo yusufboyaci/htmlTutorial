@@ -8,20 +8,20 @@
 </head>
 <body>
 
-    <table>
+    <h1>2. Soru cevap</h1>
+
+    <button onclick="getData()">Ürünleri Getir</button>
+
+    <table id="categories">
         <tr>
-            <th>description</th>
-            <th>name</th>
+            <th>Name</th>
+            <th>Description</th>
+            
         </tr>
-        <tr id="description">
-
-        </tr>
-        <tr id="name">
-
-        </tr>
+        
     </table>
     
-    <button onclick="getData()">Ürünleri Getir</button>
+   
     <script>
         function getData()
         {
@@ -29,23 +29,48 @@
             .then((res) => res.json())
             .then((data) => {
                 data.forEach(element => {
+                    //Önce boş bir satır oluşturdum
                     let newRow = document.createElement("tr");
-                    newRow.innerHTML = element.description;
-                    document.getElementById("description").appendChild(newRow);
+                   
+
+                    //Sonra satırın içerisine gelecek olan 2 td yi oluşrturup içerisini doldurdum
+
+                    let tdName = document.createElement("td");
+                    let tdDescription = document.createElement("td");
+                    tdName.innerHTML = element.name;                    
+                    tdDescription.innerHTML = element.description;
+                   
+
+                    //Son olarak oluşturduğum hücreleri satıra, satırı ise tabloya ekledim
+                    newRow.appendChild(tdName);
+                    newRow.appendChild(tdDescription);
+                   
+                    newRow.id = "row";
+                  
+
+                    document.getElementById("categories").appendChild(newRow);
+                  
+
+                    // let xName = document.getElementById("row");//
+                    // xName.addEventListener("click",functionRow);//
+                    // function functionRow(){
+                    //     document.getElementById("row").style.display = "none";
+                    // }
+
                 });
+                
+                
+                let xName = document.getElementById("row");//
+                    xName.addEventListener("click",functionRow);//
+                   
+                    function functionRow(){
+                        document.getElementById("row").style.display = "none";
+                    }
+                    
 
             });
 
-            fetch("https://northwind.vercel.app/api/categories")
-            .then((res) => res.json())
-            .then((data) => {
-                data.forEach(element => {
-                    let newRow = document.createElement("tr");
-                    newRow.innerHTML = element.name;
-                    document.getElementById("name").appendChild(newRow);
-                });
-
-            });
+            
         }
 
     </script>
