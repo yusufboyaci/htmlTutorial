@@ -5,8 +5,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- JS DOM
+    1) Ekrana bir input bir buton koy. Butona tıkladığında inputtan aldığı verinin karesini console a yazdırsın
+    2) Ekrana bir 3 input bir buton koy. Butona tıkladığında en büyük sayıyı ekrana yazdırsın
+    3) Ekrana bir input bir buton koy. Butona tıkladığında inputtan aldığı değeri büyük harfle console yazdırsın ( toUpper metodu ile)
+    4) Ekrana bir input bir buton koy. Butona tıkladığında inputa girilen sayıya kadar olan sayıların toplamını console a yazdırsın
+    5) Ekrana bir input bir buton koy. Butona tıkladığında inputtaki sayı kadar butonu ekrana append etsin. -->
+
+
+
+        <h1>1.Soru cevabı</h1>
+
+    <div>
+        <input id="sayi" type="text">
+    </div>
+   <br>
+   
+    <div>
+
+    <button id="sonuc">Karesini Al</button>
+    
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#sonuc").click(function () {
+                let sayi = Number($('#sayi').val());
+
+                let sonuc = sayi*sayi;
+                console.log(sonuc);
+            })
+
+        })
+        
+    </script>
+
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+    <h1>2.Soru cevabı</h1>
+
+    <div>
+        <input id="s1" type="text">
+    </div>
+    <br>
+    <div>
+        <input id="s2" type="text">
+    </div>
+    <br>
+    <div>
+        <input id="s3" type="text">
+    </div>
+    <br>
+    
+    <div>
+        <button id="demo1">En büyük sayıyı getir.</button>
+    </div>
+
+    <div>
+        <p id="sonuc1">
+           
+        </p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#demo1").click(function () {
+                
+                let sayi1 = Number($("#s1").val());
+                let sayi2 = Number($("#s2").val());
+                let sayi3 = Number($("#s3").val());
+                
+                if (sayi1 > sayi2 && sayi1 > sayi3)
+                {
+                    //document.getElementById("sonuc1").innerHTML = sayi1;
+                    $("#sonuc1").html(sayi1);
+                    
+                }
+                else if(sayi2 > sayi1 && sayi2 > sayi3)                 
+                {
+                    //document.getElementById("sonuc1").innerHTML = sayi2;
+                    $("#sonuc1").html(sayi2);
+                }
+                else
+                {
+                    //document.getElementById("sonuc1").innerHTML = sayi3;
+                    $("#sonuc1").html(sayi3);
+                }
+
+            })
+
+        })
+
+        
+
+    </script>
+
+
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<br>
+<br>
+        <h1>3.Soru cevabı</h1>
+        <div>
+            <input id="deger" type="text">
+        </div>
+        <br>
+
+        <div>
+            <button id="demo2">
+                Değeri büyük harfle yaz
+            </button>
+        </div>
+   <script>
+
+       $(document).ready(function (){
+        $("#demo2").click(function () {
+            let deger = $("#deger").val();
+            console.log(deger.toUpperCase());
+
+        })
+
+       });
+   </script>
+
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
     
 </body>
 </html>
