@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="categories">
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
+
+<script>
+//https://northwind.vercel.app/api/categories adresinden kategorileri fetch ile çek ve bir table a yazdır en az 2 kolon
+    // ** Yazdırdıktan sonra  herhangi bir tr ye tıklandığın o tr yi tasarımsal olarak uçur
+    
+    let url = 'https://northwind.vercel.app/api/categories';
+    fetch(url).then((res) => res.json())
+    .then((data) => {
+
+        data.map((item) => {
+            let newTr = document.createElement("tr");
+            
+            let tdName = document.createElement("td");
+            let tdDescription = document.createElement("td");
+            tdName.innerHTML = item.name;
+            tdDescription.innerHTML = item.description;
+            newTr.appendChild(tdName);
+            newTr.appendChild(tdDescription);
+            document.getElementById("categories").appendChild(newTr);
+            newTr.addEventListener("click", function () {
+                this.style.display = "none";
+            });
+        });
+    });
+
+</script>

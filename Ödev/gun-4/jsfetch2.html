@@ -49,25 +49,13 @@
                   
 
                     document.getElementById("categories").appendChild(newRow);
-                  
-
-                    // let xName = document.getElementById("row");//
-                    // xName.addEventListener("click",functionRow);//
-                    // function functionRow(){
-                    //     document.getElementById("row").style.display = "none";
-                    // }
+                                     
+                    newRow.addEventListener("click", function(){
+                        this.style.display = "none";
+                    });
 
                 });
-                
-                
-                let xName = document.getElementById("row");//
-                    xName.addEventListener("click",functionRow);//
-                   
-                    function functionRow(){
-                        document.getElementById("row").style.display = "none";
-                    }
-                    
-
+                                           
             });
 
             
