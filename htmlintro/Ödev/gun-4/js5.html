@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>8. Soru cevap</h1>
+    <div>
+        <button onclick="getData()">Unit Price 100 den büyük</button>
+    </div>
+<script>
+    function getData(){
+        let url = "https://northwind.vercel.app/api/products";
+        fetch(url).then((res) => res.json()).then((data) => {
+           
+            data.forEach(element => {
+
+                //console.log(element.unitPrice);
+            if (element.unitPrice > 100) {
+                
+                    console.log(element.unitPrice);
+               
+                
+            }
+            else{
+                console.log("Data Yok");
+            }
+        });
+        });
+
+    }
+</script>
+</body>
+</html>
