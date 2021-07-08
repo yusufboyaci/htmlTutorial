@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> JS CORE</h1>
+    <h2>6) 4 propertisi olan bir webUser objesi tanımla ve bu objeyi console a yazdır
+    </h2>
+    
+    <script>
+        const webUser = {
+            type:"User",
+            gender:"Male",
+            name:"John",
+            surname:"Adams"
+
+        }
+        console.log(webUser);
+    </script>
+
+    <h2>
+        7) 4 propertisi olan bir product objesi tanımla ve bu objeyi console a yazdır.
+    </h2>
+    <script>
+       const product = {
+           model:"araba",
+           type:"Opel",
+           brand:"vectra",
+           motor:2.0,
+           color:'red'
+
+       }
+       console.log(product);
+    </script>
+
+    <h2>8) 4 elemanlı metinsel bir dizi tanımla. Her elemanı for ile dönerek console a yazdır</h2>
+
+    <script>
+        const arabalar = ["Saab","Opel","Hyundai","BMW"];
+        for (let i = 0; i < arabalar.length; i++) {
+            const araba = arabalar[i];
+            console.log(araba);
+        }
+       
+
+    </script>
+
+    <h2>9) 4 elemanlı sayısal bir dizi tanımla. Her elemanın 1.18 katını for ile dönerek console a yazdır</h2>
+    <script>
+        const array = [1,2,3,4]
+        for (let i = 0; i < array.length; i++) {
+            const element = array[i]*1.18;
+            console.log(element);
+        }
+    </script>
+
+    <h2>10) 4 elemanlı bir obje dizisi tanımla ve console a yazdır.</h2>
+    <script>
+        const objects = [webUser,product,arabalar,array]
+        console.log(objects);
+    </script>
+
+</body>
+</html>

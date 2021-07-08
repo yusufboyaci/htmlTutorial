@@ -13,8 +13,7 @@
     1) Ekrana bir input bir buton koy. Butona tıkladığında inputtan aldığı verinin karesini console a yazdırsın
     2) Ekrana bir 3 input bir buton koy. Butona tıkladığında en büyük sayıyı ekrana yazdırsın
     3) Ekrana bir input bir buton koy. Butona tıkladığında inputtan aldığı değeri büyük harfle console yazdırsın ( toUpper metodu ile)
-    4) Ekrana bir input bir buton koy. Butona tıkladığında inputa girilen sayıya kadar olan sayıların toplamını console a yazdırsın
-    5) Ekrana bir input bir buton koy. Butona tıkladığında inputtaki sayı kadar butonu ekrana append etsin. -->
+   -->
 
 
 
@@ -135,8 +134,49 @@
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
+<br>
+<br>
 
+<!-- 4) Ekrana bir input bir buton koy. Butona tıkladığında inputa girilen sayıya kadar olan sayıların toplamını console a yazdırsın -->
 
+    <h1>4.Soru cevabı</h1>
+
+    <div>
+        <input id="deger3" type="text" >
+    </div>
+    <br>
+   
+    <div>
+        <button id="demo2">Girilen sayıya kadar olan sayıların toplamı</button>
+    </div>
+
+    <div id="sonuc"></div>
+
+<script>
+
+    $(document).ready(function () {
+
+    
+    $('#demo2').click(function (data) {
+    let sayi1 = Number($("#deger3").val());
+    let sonuc = 0;
+   data.map((item) => {
+       //let sonuc = sayi+sonuc
+         sayi1 = sayi1 + item
+   })
+    
+
+        console.log("Girilen sayıya kadar toplam : " + sayi1);
+    });
+    });    
+</script>
+
+    <!-- 5) Ekrana bir input bir buton koy. Butona tıkladığında inputtaki sayı kadar butonu ekrana append etsin. -->
+
+    <h1>5.Soru cevabı</h1>
+    <div>
+        <input type="text" name="" id="">
+    </div>
 
     
 </body>
