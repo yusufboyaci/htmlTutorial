@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="demo" type="text">
+    </div>
+    <div>
+        <button id="target">DELETE</button>
+    </div>
+
+    <script>
+        //4)*** ekrana bir input bir buton koy. butona tıkladığında inputtan aldığı id yi /suppliers endpointinin DELETE komutuna gönder ve datayı servisten SİL!!
+        let id = document.getElementById("demo").value;
+        let click = document.getElementById("target");
+        click.onclick = function () {
+            // const newSuppliers = {
+            //     id : id
+
+            // };
+
+            // let requestOptions = {
+            //     // headers:{
+            //     //     'Accept': 'application/json',
+            //     //     'Content-Type': 'application/json'
+            //     // },
+            //     method: "DELETE",
+            //     //body:JSON.stringify(newSuppliers)
+            // };
+            let url = 'https://northwind.vercel.app/api/suppliers/'+id;
+             fetch(url, {method: "DELETE"})
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+
+        }
+
+    </script>
+</body>
+</html>

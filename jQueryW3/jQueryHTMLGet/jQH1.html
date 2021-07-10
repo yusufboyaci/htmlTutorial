@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <p id="test">This is some <b>bold</b> text in a paragraph </p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <br><br>
+    <p>Name: <input type="text" id="test1" value="HH1QQ28GJKLj"> </p>
+    <button id="btn3">Show Value</button>
+    <br><br>
+    <p> <a href="https://www.w3schools.com" id="w3s" >W3schools.com</a></p>
+    <button id="btn4">Show href Value</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert("Text: " + $("#test").text());
+            });
+            $("#btn2").click(function () {
+                alert("HTML : " + $("#test").html());
+            });
+            $("#btn3").click(function () {
+                alert("Value: " + $("#test1").val());
+            });
+            $("#btn4").click(function () {
+                alert($("#w3s").attr("href"));
+            })
+        });
+    </script>
+    
+</body>
+</html>

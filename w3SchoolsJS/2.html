@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button id="lambaYak">
+Lambayı yak
+</button>
+<img id="resim" src="pic_bulboff.gif" style="width: 100px;">
+<button id="lambaKapat">
+Lambayı kapat
+</button>
+
+<script>
+    let lambaYak = document.getElementById("lambaYak");
+    lambaYak.onclick = function () {
+        document.getElementById("resim").src="pic_bulbon.gif"
+    }
+    let lambaKapat = document.getElementById("lambaKapat");
+    lambaKapat.onclick = function () {
+        document.getElementById("resim").src="pic_bulboff.gif"
+    }
+</script>
+
+</body>
+</html>

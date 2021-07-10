@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <p>Click the button multiple time to toggle the animation.</p>
+    <button id="anime">Start Animation</button>
+    <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute</p>
+    <div id="kutu"></div>
+    <style>
+        #kutu{
+            background-color: cornflowerblue;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+        }
+        #anime{
+            background-color: cyan;
+            color: black;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#anime").click(function () {
+                $("#kutu").animate({
+                    height:"toggle"
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

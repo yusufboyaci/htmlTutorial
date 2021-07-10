@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<style>
+    #kutu{
+        background-color: darkblue;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+    #anime{
+        background-color: darkmagenta;
+        color: black;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $("#anime").click(function () {
+            $("#kutu").animate({
+                left:"700px",
+                height:"-=150px",
+                width:"-=150px"
+            })
+        })
+    })
+</script>
+</head>
+<body>
+    <button id="anime">Start Animation</button>
+    By default, all HTML elements have a static position, and cannot be moved.To manipulate y-the position, remember to first set the CSS position property of the element to relative,fixed, or absolute!  
+    <div id="kutu"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <button id="anime"> Start Animation</button>
+    <br><br>
+    <div id="kutu"></div>
+    <style>
+        #kutu{
+            background-color: darkblue;
+            height: 300px;
+            width: 300px;
+            position: absolute;         
+        }
+        #anime{
+            background-color: chartreuse;
+            color: black;
+            
+        }
+    </style>
+    <script>
+
+        //backgroundColor çalışmıyor nedenini araştır.Background color çalışmıyromuş css animation la renklerini değiştir.
+        $(document).ready(function () {
+            $("#anime").click(function () {
+                let kutu = $("#kutu");
+                kutu.animate({
+                    width:'600px'
+                    ,backgroundColor:'#0000FF'
+
+                },"slow");
+                kutu.animate({
+                    height:"600px"
+                    ,backgroundColor:"#00FFFF"
+                },"slow");
+                kutu.animate({
+                    width:'50px'
+                    ,backgroundColor:"#8A2BE2"
+                },"slow");
+                kutu.animate({
+                    height:"50px"
+                    ,backgroundColor:"#D2691E"
+                },"slow")
+            })
+        })
+    </script>
+</body>
+</html>

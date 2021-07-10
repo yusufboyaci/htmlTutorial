@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div>
+    <button id="start">Start</button>
+</div>
+<br>
+<div>
+    <button id="stop">
+        Stop
+    </button>
+</div>
+<br>
+<div>
+    <button id="stop2">Stop all</button>
+</div>
+<br>
+    <div>
+        <button id="stop3">Stop but finish</button>
+    </div>
+    <br><br>
+
+    
+    
+    <div id="kutu">
+        HELLO
+    </div>
+
+    <style>
+        #kutu{
+            background-color: blue;
+            height: 200px;
+            width: 300px;
+            position: absolute;
+        }
+
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#start").click(function () {
+                $("#kutu").animate({
+                    left:"250px"
+                },5000);
+                $("#kutu").animate({
+                    fontSize:"50pt"
+                },5000);
+            });
+            $("#stop").click(function () {
+                $("#kutu").stop();
+            });
+            $("#stop2").click(function () {
+                $("#kutu").stop(true);
+            });
+            $("#stop3").click(function () {
+                $("#kutu").stop(true,true);
+            });
+        })
+    </script>
+    
+</body>
+</html>

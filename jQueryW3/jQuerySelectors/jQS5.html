@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<style>
+    .ex{
+        background-color: cornflowerblue;
+        padding: 7px;
+        border: darkgray solid 1px;
+    }
+</style>
+<body>
+    <h3>Island Trading</h3>
+    <div class="ex">
+        <button class="hide">Hide me</button>
+        <p>Contact: Helen Bennet <br>Garden House Crowther Way <br>London </p>
+    </div>
+    <h3>Paris Specialities</h3>
+    <div class="ex">
+        <button class="hide">
+            Hide me
+        </button>
+        <p>Contact: Marie Bertrand <br>265, Boulevard Charonne <br> Paris</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".ex .hide").click(function () {
+                $(this).parents(".ex").hide("slow");
+            })
+        })
+    </script>
+    
+</body>
+</html>

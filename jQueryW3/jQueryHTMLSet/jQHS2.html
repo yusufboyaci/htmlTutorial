@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <p id="p1">This is a <b>bold</b> paragraph. </p>
+    <p id="p2">This is another <b>bold</b> paragraph </p>
+    <button id="btn1">Show Old/New Text</button>
+    <button id="btn2">Show Old/New HTML</button>
+    <script>
+       $(document).ready(function () {
+           $("#btn1").click(function () {
+               $("#p1").text(function (i,originalText) {
+                   return "Old text: " + originalText + " New text: Hello world! (index: " + i + ")";
+               })
+           })
+           $("#btn2").click(function () {
+               $("#p2").html(function (i,originalText) {
+                   return  "Old html: " + originalText + " New html: Hello <b>world!</b> (index: " + i + ")";
+               })
+           })
+       }) 
+      
+    </script>
+    
+</body>
+</html>
