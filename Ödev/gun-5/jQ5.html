@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="width: 100px;height: 100px; background-color: blue;"></div>
+
+
+    <script>
+        //* Ekrana genişliği ve yüksekliği belli olan bir div koy. Arkaplan rengi de olsun. Div üzerine her tıklandığında kendine rastgele bir genişlik ve yükseklik atasın ( 0 - 500 arası)
+        
+        $("div").click(function () {
+        let width = Number(Math.floor(Math.random()*501));
+        let height = Number(Math.floor(Math.random()*501));
+            $("div").css("width",width);
+            $("div").css("height",height);
+        })
+    </script>
+</body>
+
+</html>

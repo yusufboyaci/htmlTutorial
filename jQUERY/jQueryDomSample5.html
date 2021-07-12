@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Random Numbers</h1>
+    <button>Add</button>
+    <ul></ul>
+    <script>
+        //her butona tıklandığında ekrana bir li APPEND eder. li içerisinde random bir sayı olsun
+        $("button").click(function (){
+            //0 ile 100 arasında rastgele bir sayı üretecek
+            let randomNumber = Math.floor(Math.random()*100);
+            $("ul").append("<li>" + randomNumber + "</li>")
+        })
+    </script>
+    
+</body>
+</html>

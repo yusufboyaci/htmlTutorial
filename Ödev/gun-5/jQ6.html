@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>TÜM BUNLAR SİLİNECEK</h1>
+    <p>TÜM BUNLAR SİLİNECEK</p>
+    <span>TÜM BUNLAR SİLİNECEK</span>
+    <button class="sil">SİL</button>
+    <script>
+        //* Ekrana bir buton bir p ve bir span koy. Butona tıkladığında tüm elementleri yok etsin (body içeriğini boşaltabilirsin)
+        $(".sil").click(function () {
+            $("body").css("display","none")
+        })
+    </script>
+    
+</body>
+</html>
