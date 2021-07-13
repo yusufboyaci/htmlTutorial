@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <span style="display: none; background-color: tomato;">İşlem Başarılı</span>
+
+    <div>
+        <label for="">Category Name:</label>
+        <input type="text" name="" id="categoryName">
+    </div>
+    <div>
+        <label for="">Description:</label>
+        <input type="text" name="" id="categoryDescription">
+    </div>
+    <div>
+        <button>Add</button>
+    </div>
+   
+    <ul>
+
+   </ul>
+
+</body>
+</html>
+<script>
+    //jquery ajax metodu üzerindeb servise bir data yollayacağım..
+    $("button").click(function () {
+        //button tıklandığında dataları al ve bir objeye ata;
+        //1.yol
+        let newCategory = {
+            name:$("#categoryName").val(),
+            description:$("#categoryDescription").val()
+        };
+
+        //2.yol
+        // let newCategory = new Object();
+        // newCategory.name = $("#categoryName").val();
+        // newCategory.description = $("#categoryDescription").val();
+
+        $.ajax({
+            url: 'https://northwind.vercel.app/api/categories',
+            type:"POST",
+            data: newCategory,
+            success: function () {
+                console.log("İşlem başarılı");
+                $("span").show();
+                fillData();
+            },
+            error: function () {
+                console.log('İşlem sırasında bir hata meydana geldi');
+            }
+        })
+    })
+        //bu fonksiyon tetiklendiğinde çekilen datalar ul içerisine dolar
+
+        function fillData(){
+         
+        let url = 'https://northwind.vercel.app/api/categories';
+        $.getJSON(url,function (data) {
+            $("ul li").remove();
+            data.map(item => {
+                $("ul").append(`<li> ${item.name} </li>`)
+            })
+        })
+    }
+
+
+  
+
+
+    //fillData();
+</script>
