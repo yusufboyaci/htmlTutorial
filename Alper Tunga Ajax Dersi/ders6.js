@@ -19,10 +19,44 @@ $(document).ready(function () {
     txtEmailAddress.val(user.emailAddress);
     txtPhoneNumber.val(user.phoneNumber);
     btnSend.click(function() {
-if (!txtFirstName.val().length > 0 || !txtLastName.val().length > 0 || !txtEmailAddress.val().length > 0 || !txtPhoneNumber.val().length > 0) {
-    alert('Lütfen bilgilerinizi boş bırakmayınız.')
-} else {
+    // if (!txtFirstName.val().length > 0 || !txtLastName.val().length > 0 || !txtEmailAddress.val().length > 0 || !txtPhoneNumber.val().length > 0) {
+    // alert('Lütfen bilgilerinizi boş bırakmayınız.');
+    //     } 
+    if (!txtFirstName.val().length > 0 ) 
+    {
+        alert('Lütfen bilgilerinizi boş bırakmayınız.');
+        txtFirstName.addClass('error');
+            } else
+            {
+               txtFirstName.addClass('success'); 
+            }
+
+    if (!txtLastName.val().length > 0 ) 
+        {
+            alert('Lütfen bilgilerinizi boş bırakmayınız.');
+        txtLastName.addClass('error');
+        } 
+        else
+        {
+         txtLastName.addClass('success'); 
+        }
+    if (!txtEmailAddress.val().length > 0 ) 
+    {
+        alert('Lütfen bilgilerinizi boş bırakmayınız.');
+    txtEmailAddress.addClass('error');
+    }
+    else
+    {
+    txtEmailAddress.addClass('success'); 
+    }
+    if (!txtPhoneNumber.val().length > 0 ) 
+    {
+        txtPhoneNumber.addClass('error');
+        alert('Lütfen bilgilerinizi boş bırakmayınız.');
     
-}
+    } else
+    {
+    txtPhoneNumber.addClass('success'); 
+    }
     });
 })
