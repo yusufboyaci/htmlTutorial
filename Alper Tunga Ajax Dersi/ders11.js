@@ -29,5 +29,5 @@ $(document).ready(function(){
 
     $(document).on("click",".list-group-item" ,function(event) {
         $(this).remove();
-    })
+    });
 });
